@@ -139,19 +139,13 @@ public class ViveHands : MonoBehaviour
         objectInHand = collidingObject.GetComponent<GrabInteraction>().ObjectToGrab();
         //collidingObject = null;
 
-        var joint = AddFixedJoint();
-        joint.connectedBody = objectInHand.GetComponent<Rigidbody>();
-
-        prevKinematicValue = objectInHand.GetComponent<Rigidbody>().isKinematic;
-        objectInHand.GetComponent<Rigidbody>().isKinematic = false;
-    }
-
-    private FixedJoint AddFixedJoint()
-    {
         FixedJoint fx = gameObject.AddComponent<FixedJoint>();
         fx.breakForce = 20000;
         fx.breakTorque = 20000;
-        return fx;
+        fx.connectedBody = objectInHand.GetComponent<Rigidbody>();
+
+        prevKinematicValue = objectInHand.GetComponent<Rigidbody>().isKinematic;
+        objectInHand.GetComponent<Rigidbody>().isKinematic = false;
     }
 
     private void ReleaseObject()
