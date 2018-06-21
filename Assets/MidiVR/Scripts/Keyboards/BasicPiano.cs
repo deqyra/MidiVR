@@ -29,18 +29,13 @@ public class BasicPiano : MonoBehaviour
     {
         // Retrieve dimensions of keys
         float width  = keyPrefab.GetComponent<MeshRenderer>().bounds.size.x; // width  is 0.050 for the default key
-        float height = keyPrefab.GetComponent<MeshRenderer>().bounds.size.y; // height is 0.025 for the default key
-        float depth  = keyPrefab.GetComponent<MeshRenderer>().bounds.size.z; // depth  is 0.100 for the default key
         float keyDistance = width * 1.3f;
-        float firstKeyXPos = -(((nKeys-1) / 2) * keyDistance);
+        float firstKeyXPos = -(((nKeys-1) / 2f) * keyDistance);
 
         // Retrieve dimensions of piano body
         Vector3 bodyScale = body.localScale;
-        bodyScale.x = nKeys * keyDistance;
+        bodyScale.x = (nKeys + 0.5f) * keyDistance;
         body.transform.localScale = bodyScale;
-
-        // Retrieve key rack
-        GameObject keyRack = FindGameObjectInChildrenByName(gameObject, "Keys");
 
         if (keyRack != null)
         {
@@ -57,35 +52,5 @@ public class BasicPiano : MonoBehaviour
                 keyInstance.transform.localPosition = new Vector3(firstKeyXPos + (i * keyDistance), 0, 0);
             }
         }
-    }
-
-    // Used to retrieve an object's children bounding box bounds 
-    Bounds GetMaxBounds(GameObject g)
-    {
-        var b = new Bounds(g.transform.position, Vector3.zero);
-        foreach (Renderer r in g.GetComponentsInChildren<Renderer>())
-        {
-            b.Encapsulate(r.bounds);
-        }
-        return b;
-    }
-
-    GameObject FindGameObjectInChildrenByName(GameObject root, string name)
-    {
-        Transform[] ts = transform.GetComponentsInChildren<Transform>();
-        foreach (Transform t in ts)
-        {
-            if (t.gameObject.name == name)
-            {
-                return t.gameObject;
-            }
-        }
-
-        return null;
-    }
-
-    // Update is called once per frame
-    void Update () {
-
     }
 }
