@@ -50,9 +50,16 @@ class MenuManager : MonoBehaviour
             index++;
         }
 
-        if (index > 0)
+        if (instantiateFirst)
         {
-            InstantiateObject(0);
+            if (index > 0)
+            {
+                InstantiateObject(0);
+            }
+            else
+            {
+                Debug.Log("No prefabs were registered in menu!");
+            }
         }
     }
 

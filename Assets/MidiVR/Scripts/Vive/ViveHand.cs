@@ -18,6 +18,10 @@ public class ViveHand : MonoBehaviour
     /// </summary>
     private ControllerHand hand;
 
+    [Tooltip("Which menu prefab to display upon grip press.")]
+    [SerializeField]
+    private MenuManager menu;
+
     /// <summary>
     ///     The inner tracked object cached reference, used to access the controller reference.
     /// </summary>
@@ -66,7 +70,7 @@ public class ViveHand : MonoBehaviour
 
     private void Start()
     {
-
+        HideMenu();
     }
 
     /// <summary>
@@ -246,5 +250,27 @@ public class ViveHand : MonoBehaviour
                 collidingObject.StopInteract(this);
             }
         }
+
+        if (Controller.GetPressDown(SteamVR_Controller.ButtonMask.Grip))
+        {
+            ShowMenu();
+        }
+
+        if (Controller.GetPressUp(SteamVR_Controller.ButtonMask.Grip))
+        {
+            HideMenu();
+        }
+    }
+
+    private void ShowMenu()
+    {
+        menu.gameObject.SetActive(true);
+        MakeBusy();
+    }
+
+    private void HideMenu()
+    {
+        menu.gameObject.SetActive(false);
+        UnmakeBusy();
     }
 }

@@ -175,6 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textCanvas: {fileID: 114780478238293302}
   menu: {fileID: 0}
+  body: {fileID: 23005868509410146}
   pressButton: {fileID: 114481762452746508}
 --- !u!114 &114461288248537336
 MonoBehaviour:

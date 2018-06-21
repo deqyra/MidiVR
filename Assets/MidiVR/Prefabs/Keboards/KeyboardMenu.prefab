@@ -51,11 +51,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 032bb55f7518cf343b77300d1257d448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  managesUniqueCollection: 1
+  instantiateFirst: 1
+  menuItemPrefab: {fileID: 114245752159840316, guid: 7033c78c99d5b134b967171d4668aeb8,
+    type: 2}
   prefabs:
   - name: Basic piano
     objectPrefab: {fileID: 1454138885816470, guid: 9acef6556941a054bb23adfd4b13b2a9,
       type: 2}
     parentTransform: {fileID: 0}
-  managesUniqueCollection: 1
-  menuItemPrefab: {fileID: 114245752159840316, guid: 7033c78c99d5b134b967171d4668aeb8,
-    type: 2}
