@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections.Generic;
 
 [Serializable]
-public class PressInteraction : MonoBehaviour
+public class PressInteraction : MidiVRInteraction
 {
     [SerializeField]
     [Tooltip("Defines how fast the button moves up and down.")]
@@ -65,6 +65,8 @@ public class PressInteraction : MonoBehaviour
 
     void Start()
     {
+        interactionType = InteractionType.Press;
+
         switch (direction)
         {
             case Direction.X:
@@ -83,12 +85,29 @@ public class PressInteraction : MonoBehaviour
 
         if (!reverse)
         {
-            minPos -= maxPressDistance;
+            minPos += maxPressDistance;
         }
         else
         {
-            minPos += maxPressDistance;
+            minPos -= maxPressDistance;
         }
+    }
+
+    public override void StartInteract(ViveHand hand)
+    {
+        interacted = true;
+        Press();
+    }
+
+    public override void StartInteractDelayed(ViveHand hand)
+    {
+        StartInteract(hand);
+    }
+
+    public override void StopInteract(ViveHand hand)
+    {
+        interacted = false;
+        Unpress();
     }
 
     /// <summary>

@@ -717,7 +717,7 @@ PlayerSettings:
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: bac49ef3-6ed2-4834-b866-f67d942e3065
-  projectName: 
+  projectName: MidiVR
   organizationId: joqaste
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
