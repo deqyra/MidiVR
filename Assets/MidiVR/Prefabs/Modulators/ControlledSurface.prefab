@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 65276172469393222}
   - component: {fileID: 23746366647284684}
   - component: {fileID: 114361014767355540}
+  - component: {fileID: 114780227965513556}
   m_Layer: 0
   m_Name: Knob
   m_TagString: Untagged
@@ -111,8 +112,8 @@ GameObject:
   - component: {fileID: 33733087233055134}
   - component: {fileID: 65395466222943668}
   - component: {fileID: 23571677464220016}
-  - component: {fileID: 114546419813044908}
   - component: {fileID: 114832839630860002}
+  - component: {fileID: 114015369173369530}
   m_Layer: 0
   m_Name: Knob
   m_TagString: Untagged
@@ -271,7 +272,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1323645156892886}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -1.013216, y: 1.072, z: 0.475}
+  m_LocalPosition: {x: -0.3496587, y: 0.6949995, z: -0.8236976}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4153834003630628}
@@ -1091,6 +1092,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114015369173369530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1343042798843504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ccb866c910a30e47a9b08bf2d03e7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knob: {fileID: 114832839630860002}
+  direction: 1
 --- !u!114 &114209659445348184
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1140,17 +1154,19 @@ MonoBehaviour:
   minYKnobPosition: -0.425
   knobs:
   - {fileID: 114967759553372668}
---- !u!114 &114546419813044908
+--- !u!114 &114780227965513556
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1343042798843504}
+  m_GameObject: {fileID: 1128819325224888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ccb866c910a30e47a9b08bf2d03e7f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knob: {fileID: 114361014767355540}
+  direction: 0
 --- !u!114 &114805667299660746
 MonoBehaviour:
   m_ObjectHideFlags: 1

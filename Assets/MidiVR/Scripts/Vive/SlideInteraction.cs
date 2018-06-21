@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-class SlideInteraction : MidiVRInteraction
+public class SlideInteraction : MidiVRInteraction
 {
     /// <summary>
     ///     Parent fader body object.

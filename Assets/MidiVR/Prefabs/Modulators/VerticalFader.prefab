@@ -114,6 +114,7 @@ GameObject:
   - component: {fileID: 65321680690422148}
   - component: {fileID: 23554450992742168}
   - component: {fileID: 114261948130599296}
+  - component: {fileID: 114827981453673178}
   m_Layer: 0
   m_Name: Knob
   m_TagString: Untagged
@@ -154,8 +155,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1422769708143468}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6016476, y: 0.6949995, z: -2.3512604}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.5244646, y: 0.6949995, z: 0.13732612}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4815112817770774}
@@ -163,7 +164,7 @@ Transform:
   - {fileID: 4370692015651600}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &4815112817770774
 Transform:
   m_ObjectHideFlags: 1
@@ -562,3 +563,16 @@ MonoBehaviour:
   minYKnobPosition: -0.425
   knobs:
   - {fileID: 114261948130599296}
+--- !u!114 &114827981453673178
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1655242394979638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ccb866c910a30e47a9b08bf2d03e7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knob: {fileID: 114261948130599296}
+  direction: 1

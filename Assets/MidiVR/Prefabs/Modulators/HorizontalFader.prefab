@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 65523809460789578}
   - component: {fileID: 23177533772075964}
   - component: {fileID: 114401861723027470}
+  - component: {fileID: 114824571554620402}
   m_Layer: 0
   m_Name: Knob
   m_TagString: Untagged
@@ -181,7 +182,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1252275437609400}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.5182975, y: 0.911, z: 0.63}
+  m_LocalPosition: {x: -0.4732376, y: 0.074999526, z: -0.5925826}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4043548273417156}
@@ -549,3 +550,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToGrab: {fileID: 54383528528953904}
+--- !u!114 &114824571554620402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241763282889156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ccb866c910a30e47a9b08bf2d03e7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knob: {fileID: 114401861723027470}
+  direction: 0
