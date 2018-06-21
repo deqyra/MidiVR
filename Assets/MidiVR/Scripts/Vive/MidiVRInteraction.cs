@@ -2,6 +2,7 @@
 using UnityEngine;
 
 [Serializable]
+[RequireComponent(typeof(BoxCollider))]
 public abstract class MidiVRInteraction : MonoBehaviour
 {
     protected InteractionType interactionType;
