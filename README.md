@@ -1,5 +1,5 @@
 # MidiVR
-### A generic MIDI controller: does the same as MIDI keyboards, but withouth keyboards and in VR.
+### A generic MIDI controller: does the same as MIDI keyboards, but without keyboards and in VR.
 
 
 **Written in C#, using Unity3D and SteamVR for HTC Vive.**  
